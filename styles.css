@@ -1,0 +1,67 @@
+/*************** Resets **************/
+html {
+   box-sizing: border-box;
+   color: #444;
+   font: 12pt 'Open Sans';
+   font-weight: 300;
+}
+
+*, *::before, *::after {
+   box-sizing: inherit;
+   color: inherit;
+}
+/************************************/
+
+
+/*********** Defaults *************/
+
+.hero {
+    text-align: center;
+    background-color: orange;
+}
+
+form {
+    padding: 5px 0 10px 0;
+    background-color: red;
+}
+/************************************/
+
+
+/************** Layout ************/
+
+.wrapper {
+    display: flex; 
+    flex-direction: column;
+    background-color: blue;
+    max-width: 960px;
+    margin: 15px;
+    padding: 15px;
+}
+
+.wrapper div {
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.panel {
+    flex: 1; 
+    overflow: auto;
+    background-color: green;
+    text-align: center;
+    padding: 5px 0 20px 0;
+    width: 800px;
+}
+
+.content {
+    background-color: yellow;
+    padding: 15px;
+    margin: 15px;
+}
+/************************************/
+
+/************ Component *************/
+
+.hero > h1 {
+    font-size: 44pt;
+}
+/************************************/
