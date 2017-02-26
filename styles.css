@@ -14,54 +14,113 @@ html {
 
 
 /*********** Defaults *************/
-
 .hero {
     text-align: center;
-    background-color: orange;
+    background-color: #3097D1;
+    padding: 20px 0;
+    border-radius: 3px;
 }
 
 form {
     padding: 5px 0 10px 0;
-    background-color: red;
+    /*background-color: red;*/
 }
+
+input, select, textarea{
+    color: #3097D1;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+    color: #3097D1;
+}
+
+/*::-webkit-input-placeholder {
+    color: #C8C8C8;
+}*/
 /************************************/
 
 
 /************** Layout ************/
-
 .wrapper {
     display: flex; 
     flex-direction: column;
-    background-color: blue;
+    background-color: orange;
     max-width: 960px;
-    margin: 15px;
-    padding: 15px;
+    padding-top: 10px;
 }
 
-.wrapper div {
+.wrapper > div {
     margin: 0 auto;
     padding: 5px;
+    width: 800px;
 }
 
 .panel {
     flex: 1; 
     overflow: auto;
-    background-color: green;
+    /*background-color: green;*/
     text-align: center;
-    padding: 5px 0 20px 0;
-    width: 800px;
+    padding: 15px 0 20px 0;
+}
+
+.media-object {
+    width: 400px;
+    height: 30px;
+    /*background-color: pink;*/
+    margin: 0 auto;
+    padding: 2px;
+}
+
+#search {
+    float: left;
+    margin-left: 10px;
+}
+
+#submit {
+    margin-right: 10px;
 }
 
 .content {
-    background-color: yellow;
+    background-color: #F5F8FA;
+    /*background-color: #3097D1;*/
     padding: 15px;
     margin: 15px;
 }
+
+.content p {
+    font-size: 16pt;
+    color: #3097D1;
+}
 /************************************/
 
-/************ Component *************/
-
+/************ Component Styling *************/
 .hero > h1 {
     font-size: 44pt;
+    color: #FFF;
+}
+
+.container-fluid {
+    /*background-color: #F5F8FA;*/
+    background-color: #A9A9AC;
+}
+
+.media-object input {
+    width: 300px;
+    border: none;
+    border-bottom: 2px solid #3097D1;
+    text-align: center;
+    font-size: 17pt;
+    /*font-weight: 400;*/
+}
+
+.media-object button {
+    width: 70px;
+    border: none;
+    border-radius: 4px;
+    background-color: #3097D1;
+    margin-left: 5px;
+    font-size: 17pt;
+    color: #FFF;
 }
 /************************************/

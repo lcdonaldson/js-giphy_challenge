@@ -3,35 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-
+    
+    <!-- jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>    
+    
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-    
     <!-- my links -->
     <link rel="stylesheet" href="styles.css">
     <script src="main.js"></script>
+
 </head>
 <body>
 
-    <div class="wrapper">
-        <div>
-            <header class="hero">
+    <div class="container-fluid wrapper">
+        <div class="row">
+            <header class="hero col-xs-12">
                 <h1>The Gift of Giph</h1>
             </header>
             
-            <div class="panel">
+            <div class="panel col-xs-12">
                 <form action="">
-                    <input type="search" placeholder="Search">
-                    <input type="submit">
+                    <div class="media-object">
+                        <div id="search">
+                            <input type="search" id="name" name="user_name" placeholder="What are you looking for ?">
+                        </div>
+                        <div id="submit" class="button">
+                            <button type="submit">Find!</button>
+                        </div>   
+                    </div>
                 </form>
                 <div class="content">
                     <p>example</p>
