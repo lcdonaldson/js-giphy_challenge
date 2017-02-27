@@ -10,15 +10,20 @@ html {
    box-sizing: inherit;
    color: inherit;
 }
+
 /************************************/
 
 
 /*********** Defaults *************/
-.hero {
+body {
+    background-color: #F5F8FA;
+}
+
+header {
     text-align: center;
-    background-color: #3097D1;
     padding: 20px 0;
-    border-radius: 3px;
+    border-radius: 4px;
+    margin-bottom: -5px;
 }
 
 form {
@@ -35,9 +40,20 @@ textarea:focus, input:focus {
     color: #3097D1;
 }
 
-/*::-webkit-input-placeholder {
-    color: #C8C8C8;
-}*/
+input[placeholder] {
+    font-weight: 400;
+}
+
+::-webkit-input-placeholder {
+    color: #dcd5cb;
+    /*color: #f5f8fa;*/
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 3px;
+}
 /************************************/
 
 
@@ -45,7 +61,6 @@ textarea:focus, input:focus {
 .wrapper {
     display: flex; 
     flex-direction: column;
-    background-color: orange;
     max-width: 960px;
     padding-top: 10px;
 }
@@ -59,15 +74,14 @@ textarea:focus, input:focus {
 .panel {
     flex: 1; 
     overflow: auto;
-    /*background-color: green;*/
     text-align: center;
     padding: 15px 0 20px 0;
+    /*margin-bottom: -10px;*/
 }
 
 .media-object {
     width: 400px;
     height: 30px;
-    /*background-color: pink;*/
     margin: 0 auto;
     padding: 2px;
 }
@@ -83,35 +97,39 @@ textarea:focus, input:focus {
 
 .content {
     background-color: #F5F8FA;
-    /*background-color: #3097D1;*/
     padding: 15px;
     margin: 15px;
+    min-height: 150px;
+    border-radius: 4px;
 }
 
 .content p {
     font-size: 16pt;
     color: #3097D1;
 }
+
+.linear {
+  margin: 0 auto;
+}
 /************************************/
 
+
 /************ Component Styling *************/
+.hero {
+    background-color: #3097D1;
+}
+
 .hero > h1 {
     font-size: 44pt;
     color: #FFF;
 }
 
-.container-fluid {
-    /*background-color: #F5F8FA;*/
-    background-color: #A9A9AC;
-}
-
 .media-object input {
-    width: 300px;
+    width: 280px;
     border: none;
     border-bottom: 2px solid #3097D1;
     text-align: center;
     font-size: 17pt;
-    /*font-weight: 400;*/
 }
 
 .media-object button {
@@ -119,8 +137,14 @@ textarea:focus, input:focus {
     border: none;
     border-radius: 4px;
     background-color: #3097D1;
-    margin-left: 5px;
     font-size: 17pt;
+    color: #FFF;
+}
+
+.dev_info {
+    background-color: #3097D1;
+    border-radius: 4px;
+    font-size: 11pt;
     color: #FFF;
 }
 /************************************/
