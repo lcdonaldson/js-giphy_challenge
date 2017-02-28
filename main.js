@@ -1,43 +1,44 @@
-$(document).ready(function (){
+$(document).ready(function () {
+    var offset = 20;
+    var placeholder;
+
+    function makeGiphyCall(offset) {
+        var api = "http://api.giphy.com/v1/gifs/search?";
+        var apiKey = "&api_key=dc6zaTOxFJmzC";
+        var written = $("#name").val();
+
+        if (placeholder != written) {
+            $('.content').html("");
+            placeholder = written;
+            offset = 20;
+        };
+
+        var query = "&q=" + written + "&limit=20&offset=" + offset;
+        var url = api + apiKey + query;
+        var xhr = $.get(url);
+
+        xhr.done(function(giphy) {
+        // When the request has been made, and you get a response
+            for (var i = 0; i < giphy.data.length; i++) {
+                var data = giphy.data[i].images.downsized.url;
+                var result = $('.content').append("<img src='" + data + "'/>");
+            };
+
+        });
+    }
+
     $("button").on("click", function(event){
         event.preventDefault();
 
-        var xhr = $.get("http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=dc6zaTOxFJmzC&limit=5");
-        // var img = $('<img/>', {src: xhr + '.png'});
-        // img.appendTo('.content');
+        makeGiphyCall();
 
-        xhr.done(function(data) { 
-            // $('<p>' +  xhr + '</p>').appendTo('.content');
-            console.log(data);
-            var data = data.data[0].images.original.url;
-            // var result = drawImage(data);
-            document.getElementById("results").innerHTML = data; 
-
+        $(window).scroll(function() {
+            if($(window).scrollTop() == $(document).height() - $(window).height()) {
+                makeGiphyCall(offset);
+                offset += 20;
+            }
         });
 
-
-        // var written = $("#name").val();
-        // $('<p>' +  written + '</p>').appendTo('.content');
-
-
-
-        // var api = "http://api.giphy.com/v1/gifs/search?";
-        // var apiKey = "&api_key=dc6zaTOxFJmzC";
-        // var query = "&q=ryan+gosling";
-
-        // function setup() {
-        //     noCanvas();
-        //     var url = api + apiKey + query;
-        //     loadJSON(url, gotData);
-        // };
-
-        // function gotData(data) {
-        //     println(data.data[0].images.original.url)
-        // };
-
-                
     });
-
-    
 
 });
